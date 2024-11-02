@@ -19,92 +19,35 @@
 
 @media (min-width: 1200px) { .ratio-16x9 { height: 30vh; width: 70vh /* 70% da altura da viewport */ } }
 
-      .my-section {
-    
-    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
-    background-position: center; /* Centraliza a imagem */
-    background-color: #000000; /* Escolha a cor que preferir */
-    width: 100vw;
-    padding-top: 2vw;    
-    padding-bottom: 2%;
-      }
+body {
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+}
 
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+a {
+    color: #007bff; /* Links com azul */
+}
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+a:hover {
+    color: #0056b3; /* Links ao passar o mouse */
+}
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    border-color: #0056b3;
+}
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+/* Outros elementos */
+.navbar, .footer {
+    background-color: #1c1c1c; /* Fundo da navbar e rodapé */
+}
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
     </style>
 
     
@@ -161,55 +104,56 @@
 
   
   <section class="text-center">
-        <h1 class="fw-light">Lucas Alves Silva</h1>
-        <p class="lead text-body-secondary">Desenvolvedor Python e Cientista de Dados</p>
-        
-        <!-- Layout flexível para ícones e vídeo -->
-        <div class="my-section mx-auto d-flex justify-content-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <!-- Ícones das redes sociais -->
-          <div class="d-flex flex-column me-3 m-2">
-            <a href="#" target="_blank" class="btn btn-outline-primary mb-3 m-2">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" target="_blank" class="btn btn-outline-danger mb-3 m-2">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:lucas2010silva@hotmail.com" target="_blank" class="btn btn-outline-primary mb-3 m-2">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-  
-          <!-- Vídeo do YouTube --> 
-          <div class="ratio ratio-16x9">
-          <iframe class="ratio ratio-16x9" src="https://www.youtube.com/embed/Z-Saz0EbqE8" title="" frameborder="0"; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div> 
+    <h1 class="fw-light mt-3">Lucas Alves Silva</h1>
+    <p class="lead text-body-secondary">Desenvolvedor Python e Cientista de Dados</p>
 
-          <div class="d-flex flex-column ms-3 m-2">
-            <a href="https://www.linkedin.com/in/lucas-alves-silva-504249217/" target="_blank" class="btn btn-outline-primary mb-3 m-2">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.youtube.com/@lucaslukealves" target="_blank" class="btn btn-outline-danger mb-3 m-2">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://wa.me/34998009652" target="_blank" class="btn btn-outline-primary mb-3 m-2">
-              <i class="fab fa-whatsapp"></i>
-            </a>  
-          </div>
-      </div>
+    <!-- Layout flexível para ícones e vídeo -->
+    <div class="d-flex flex-column align-items-center">
 
-      
+        <div class="d-flex justify-content-center align-items-center mb-4">
+            <!-- Ícones das redes sociais - Esquerda -->
+            <div class="d-flex flex-column me-3">
+                <a href="#" target="_blank" class="btn btn-outline-danger mb-3">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" class="btn btn-outline-danger mb-3">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:lucas2010silva@hotmail.com" target="_blank" class="btn btn-outline-primary mb-3">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <!-- Vídeo do YouTube -->
+            <div class="ratio ratio-16x9">
+                <iframe class="ratio ratio-16x9" src="https://www.youtube.com/embed/Z-Saz0EbqE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Ícones das redes sociais - Direita -->
+            <div class="d-flex flex-column ms-3">
+                <a href="https://www.linkedin.com/in/lucas-alves-silva-504249217/" target="_blank" class="btn btn-outline-primary mb-3">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@lucaslukealves" target="_blank" class="btn btn-outline-danger mb-3">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/34998009652" target="_blank" class="btn btn-outline-primary mb-3">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
 
     </div>
 
     <p>
-      <a href="/" class="btn btn-outline-secondary my-2">Currículo</a>
-      <a href="/adicionar" class="btn btn-secondary my-2">Adicione um comentário</a>
+        <a href="/" class="btn btn-outline-secondary my-2">Currículo</a>
+        <a href="/adicionar" class="btn btn-secondary my-2">Adicione um comentário</a>
     </p>
 
     {% block content %}{% endblock %}
 
-  </section>
+</section>
+
 
   
 
