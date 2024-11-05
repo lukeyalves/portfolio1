@@ -32,22 +32,20 @@ a:hover {
     color: #0056b3; /* Links ao passar o mouse */
 }
 
-.btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-}
-
-.btn-outline-primary:hover {
-    color: #ffffff;
-    background-color: #007bff;
-    border-color: #0056b3;
-}
-
 /* Outros elementos */
 .navbar, .footer {
     background-color: #1c1c1c; /* Fundo da navbar e rodapé */
+    
 }
-
+.btn-outline-custom {
+    border: 2px solid white; /* Define a borda branca */
+    color: white;            /* Define a cor do texto */
+    background-color: transparent; /* Fundo transparente */
+}
+.btn-outline-custom:hover {
+    background-color: white; /* Define o fundo branco ao passar o mouse */
+    color: black;             /* Troca a cor do texto para contraste */
+}
     </style>
 
     
@@ -119,7 +117,7 @@ a:hover {
                 <a href="#" target="_blank" class="btn btn-outline-danger mb-3">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:lucas2010silva@hotmail.com" target="_blank" class="btn btn-outline-primary mb-3">
+                <a href="mailto:lucas2010silva@hotmail.com" target="_blank" class="btn btn-outline-danger mb-3">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -131,13 +129,13 @@ a:hover {
 
             <!-- Ícones das redes sociais - Direita -->
             <div class="d-flex flex-column ms-3">
-                <a href="https://www.linkedin.com/in/lucas-alves-silva-504249217/" target="_blank" class="btn btn-outline-primary mb-3">
+                <a href="https://www.linkedin.com/in/lucas-alves-silva-504249217/" target="_blank" class="btn btn-outline-danger mb-3">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.youtube.com/@lucaslukealves" target="_blank" class="btn btn-outline-danger mb-3">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://wa.me/34998009652" target="_blank" class="btn btn-outline-primary mb-3">
+                <a href="https://wa.me/34998009652" target="_blank" class="btn btn-outline-danger mb-3">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -146,8 +144,8 @@ a:hover {
     </div>
 
     <p>
-        <a href="/" class="btn btn-outline-secondary my-2">Currículo</a>
-        <a href="/adicionar" class="btn btn-secondary my-2">Adicione um comentário</a>
+        <a href="/" class="btn btn-outline-custom my-2">Currículo</a>
+        <a href="/adicionar" class="btn btn-outline-custom my-2">Adicione um comentário</a>
     </p>
 
     {% block content %}{% endblock %}
