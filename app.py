@@ -32,54 +32,13 @@ def adicionar():
         return redirect(url_for('index'))
     return render_template('comentario.html')
 
-#calculadora
-@app.route('/calculadora', methods=['GET', 'POST'])
-def calcular():
+#adicionar comentário
+@app.route('/curriculo', methods=['GET', 'POST'])
+def currículo():
     if request.method == 'POST':
-        # Pegue os valores enviados pelo formulário
-        operacao = request.form.get('operacao')
-        num1 = float(request.form.get('num1'))
-        
-        # Para operações com dois números, verificar se o segundo número foi passado
-        if operacao in ['soma', 'subtracao', 'multiplicacao', 'divisao', 'potencia']:
-            num2 = float(request.form.get('num2'))
+        return redirect(url_for('index'))
+    return render_template('curriculo.html')
 
-        resultado = ""
-        
-        try:
-            if operacao == 'soma':
-                resultado = num1 + num2
-            elif operacao == 'subtracao':
-                resultado = num1 - num2
-            elif operacao == 'multiplicacao':
-                resultado = num1 * num2
-            elif operacao == 'divisao':
-                if num2 != 0:
-                    resultado = num1 / num2
-                else:
-                    resultado = "Erro: Divisão por zero"
-            elif operacao == 'potencia':
-                resultado = num1 ** num2
-            elif operacao == 'raiz':
-                if num1 >= 0:
-                    resultado = math.sqrt(num1)
-                else:
-                    resultado = "Erro: Raiz quadrada de número negativo"
-            elif operacao == 'seno':
-                resultado = math.sin(math.radians(num1))
-            elif operacao == 'cosseno':
-                resultado = math.cos(math.radians(num1))
-            elif operacao == 'tangente':
-                resultado = math.tan(math.radians(num1))
-        
-        except ValueError:
-            resultado = "Erro: Entrada inválida"
-        
-        # Renderize o template com o resultado
-        return render_template('calculadora.html', resultado=resultado)
-
-    # Se for uma requisição GET, apenas exiba o formulário da calculadora
-    return render_template('calculadora.html', resultado=None)
 
 if __name__ == '__main__':
     with app.app_context():

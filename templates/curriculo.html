@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Comentários{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4 text-light">Comentários</h2>
+{% if comentarios %}
+    <ul class="list-group bg-transparent">
+        {% for comentario in comentarios %}
+            <li class="list-group-item bg-transparent text-light">
+                <h5>{{ comentario.nome }}</h5>
+                <p>{{ comentario.comentario }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="alert alert-warning bg-dark text-light" role="alert">
+        Não há comentários cadastrados. <a href="{{ url_for('adicionar') }}" class="alert-link">Adicione um comentário</a>.
+    </div>
+{% endif %}
+{% endblock %}
